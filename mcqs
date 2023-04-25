@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap');
+
+        *{
+            font-family: 'Ysabeau', sans-serif;
+            font-size: 44px;
+
+        }
+        .question{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            display: inline-block;
+        }
+        .card{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="title" style="text-align:center">
+        <h1>Answer the below questions</h1>
+    </div>
+    <div class="wrap">
+        <div class="card">
+            <div class="question">Who developed Python Programming Language?</div><br>
+            <div class="option">
+                <input type="radio" name="one" onclick="val('answer11',0)">
+                <label for="">Wick van Rossum</label>
+                <input type="radio" name="one" onclick="val('answer11',0)">
+                <label for="">Rasmus Lerdorf</label><br>
+                <input type="radio" name="one" onclick="val('answer11',1)">
+                <label for="">Guido van Rossum</label>
+                <input type="radio" name="one" onclick="val('answer11',0)">
+                <label for="">Niene Stom</label><br>
+            </div>
+            <div>
+                <br>
+                <button id="answer1" onclick="ans(`${id}1`)">answer</button>
+                <p id="answer11" style="display: none;">the answer is:Guido van Rossum</p>
+            </div>
+        </div><br><br>
+
+        <div class="card">
+            <div class="question">Which type of Programming does Python support?</div><br>
+            <div class="option">
+                <input type="radio" name="one" onclick="val('answer21',0)">
+                <label for="">object-oriented programming</label>
+                <input type="radio" name="one" onclick="val('answer21',0)">
+                <label for="">structured programming</label><br>
+                <input type="radio" name="one" onclick="val('answer21',0)">
+                <label for="">functional programming</label>
+                <input type="radio" name="one" onclick="val('answer21',1)">
+                <label for="">all of the mentioned</label><br>
+            </div>
+            <div>
+                <br>
+                <button id="answer2" onclick="ans(`${id}1`)">answer</button>
+                <p id="answer21" style="display: none;">the answer is:all of the mentioned</p>
+            </div>
+        </div><br><br>
+
+        <div class="card">
+            <div class="question">Is Python case sensitive when dealing with identifiers?</div><br>
+            <div class="option">
+                <input type="radio" name="one" onclick="val('answer31',0)">
+                <label for="">no</label>
+                <input type="radio" name="one" onclick="val('answer31',1)">
+                <label for="">yes</label><br>
+                <input type="radio" name="one" onclick="val('answer31',0)">
+                <label for="">machine dependant</label>
+                <input type="radio" name="one" onclick="val('answer31',0)">
+                <label for="">none of the mentioned</label><br>
+            </div>
+            <div>
+                <br>
+                <button id="answer3" onclick="ans(`${id}1`)">answer</button>
+                <p id="answer31" style="display: none;">the answer is:yes</p>
+            </div>
+        </div><br><br>
+
+        <div class="card">
+            <div class="question">Which of the following is the correct extension of the Python file?</div><br>
+            <div class="option">
+                <input type="radio" name="one" onclick="val('answer41',0)">
+                <label for="">.python</label>
+                <input type="radio" name="one" onclick="val('answer41',0)">
+                <label for="">.pl</label><br>
+                <input type="radio" name="one" onclick="val('answer41',1)">
+                <label for="">.py</label>
+                <input type="radio" name="one" onclick="val('answer41',0)">
+                <label for="">.p</label><br>
+            </div>
+            <div>
+                <br>
+                <button id="answer4" onclick="ans(`${id}1`)">answer</button>
+                <p id="answer41" style="display: none;">the answer is:.py</p>
+            </div>
+        </div><br><br>
+
+        <script>
+            function ans(ans){
+                let x = document.getElementById(ans)
+                if(x.style.display === "none")
+                    {
+                        x.style.display = "block"
+                    }
+                    else{
+                        x.style.display = "none"
+                    }
+            }
+
+            function val(ele,cAns){
+                if(cAns == 1){
+                    ans(ele)
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
